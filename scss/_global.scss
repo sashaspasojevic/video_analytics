@@ -1,0 +1,215 @@
+@import "var";
+@import "mixins";
+
+// /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// *{
+//         margin: 0;
+//         padding: 0;
+//         box-sizing: border-box;
+// }
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $fontFamily;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  // text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: $color11;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+// article>*+* {
+//         margin-top: 1em;
+// }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  @include breakpoint(phone) {
+    width: 90%;
+  }
+  @include breakpoint(phone) {
+    width: 95%;
+  }
+}
+
+.py {
+  padding: 90px 0 100px;
+
+  @media (max-width: 1300px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: $color10;
+  color: $color1;
+  border: 1px solid $color10;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  overflow: hidden;
+  margin-top: 30px;
+  border-radius: 100px;
+  cursor: pointer;
+  // transition: $transition;
+  &:hover {
+    color: $color10;
+    background-color: $color1;
+    border: none;
+    border: 1px solid $color10;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// li content before
+
+.li_content {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: $color1;
+  height: 2px;
+  width: 100%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+// ballon
+
+.ballon {
+  height: 200px;
+  background-color: $color9;
+}
+
+// css for scrolling effect
+
+// body {
+//   overflow-x: hidden;
+// }
+
+// section {
+//   transform: translateX(400%);
+//   transition: $transition;
+// }
+
+
+
+
+// .showSection {
+//   transform: translateX(0);
+//   transition: $transition;
+// }
+
+// p {
+//   @include breakpoint(phone){
+//     font-size: 0.85rem;
+//   }
+// }

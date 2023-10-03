@@ -1,0 +1,85 @@
+@import "global";
+@import "mixins";
+@import "var";
+
+.expertise {
+  background: linear-gradient(to right, $color8, $color3);
+  color: $color1;
+}
+
+.expertise__container {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+  @include breakpoint(phone) {
+    display: block;
+  }
+}
+
+.expertise__text {
+  flex: 0 0 32.5%;
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+  h3 {
+    font-size: 1.65rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 12%;
+      height: 3px;
+      background: $color1;
+      margin: 8px 0 40px;
+    }
+  }
+  p {
+    color: $color1;
+  }
+}
+
+.expertise__cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 62.5%;
+  @include breakpoint(tablet) {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  @include breakpoint(phone) {
+    width: 100%;
+    display: block;
+  }
+
+  .expertise__card {
+    text-align: center;
+    &:hover p > i {
+      transform: rotateZ(360deg);
+      transition: $transition;
+    }
+    @include breakpoint(phone) {
+      margin-top: 100px;
+    }
+    p > i {
+      font-size: 2.8rem;
+    }
+
+    p {
+      color: $color1;
+    }
+
+    .expertise__card-number {
+      font-size: 1.95rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+}

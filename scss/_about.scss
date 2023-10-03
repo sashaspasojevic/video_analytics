@@ -1,0 +1,55 @@
+@import "global";
+@import "mixins";
+@import "var";
+
+.about {
+  position: relative;
+}
+
+.about_carousel {
+  margin: -210px 0 0;
+  min-height: 350px;
+  z-index: 3;
+  .owl-item.active.center .item {
+    transform: scale(1.15);
+    opacity: 1;
+    background: $color7;
+    background: -webkit-linear-gradient(to right, $color3, $color7);
+    background: linear-gradient(to right, $color3, $color7);
+  }
+  .item {
+    text-align: center;
+    padding: 20px 15px;
+    background-color: $color7;
+    transform: scale(0.9);
+    transition: all 0.3s;
+    .fas {
+      font-size: 3rem;
+      margin: 20px 0;
+    }
+    .item_text {
+      margin: 30px 0 50px;
+      @include breakpoint(phone) {
+        margin: 30px 30px 50px;
+      }
+    }
+  }
+}
+
+.about_text {
+  margin-top: 150px;
+
+  .about_text-abt{
+    font-weight: 600;
+  }
+  .about_text-exp {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    @include breakpoint(phone){
+        font-size: 1.8rem;
+    }
+  }
+  p:nth-child(4) {
+    margin: 40px 0 30px;
+  }
+}

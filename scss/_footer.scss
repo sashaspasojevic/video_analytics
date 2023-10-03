@@ -1,0 +1,28 @@
+@import "global";
+@import "mixins";
+@import "var";
+
+footer {
+  text-align: center;
+  background-color: $color11;
+  color: $color1;
+
+  .footer__networks {
+    font-size: 2rem;
+    @include breakpoint(phone) {
+      font-size: 1.6rem;
+    }
+    a {
+      margin-left: 30px;
+      &:hover i {
+        transform: scale(0.9);
+        color: $color4;
+      }
+    }
+  }
+
+  p {
+    color: $color1;
+    margin-top: 30px;
+  }
+}

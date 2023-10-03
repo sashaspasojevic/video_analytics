@@ -1,0 +1,40 @@
+@import "global";
+@import "mixins";
+@import "var";
+
+.contract {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/handling.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container {
+    padding: 20px 0;
+  }
+  p {
+    color: $color1;
+    max-width: 570px;
+    @include breakpoint(phone) {
+      max-width: 100%;
+    }
+  }
+  .contract__text {
+    font-size: 1.8rem;
+    @include breakpoint(phone) {
+      font-size: 1.3rem;
+    }
+    span i {
+      font-size: 1rem;
+      @include breakpoint(phone) {
+        font-size: 0.9rem;
+      }
+    }
+    .fa-quote-left {
+      transform: translateY(-50%);
+    }
+    .fa-quote-right {
+      transform: translateY(50%);
+    }
+  }
+}
